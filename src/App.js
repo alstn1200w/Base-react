@@ -1,16 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import Person from './Person'
-import Todo from './Todo'
+import React, { Component } from 'react';
+import Animal from './Animal';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      <Todo user="Minsoo"></Todo>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return <Animal type='cat' name='meyow' size='small' sound='low' appearence='cute'></Animal>
+  }
 }
 
 export default App;

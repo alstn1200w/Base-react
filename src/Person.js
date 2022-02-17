@@ -1,18 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-class Person extends Component {
+class Person extends React.Component {
+  state = {
+      name: "sunrise",
+      age: 23,
+      friends: [
+          "victoria",
+          "daniel",
+          "hanna"
+      ]
+  }
+
+  // 이벤트 핸들러 함수
+  displayInfo  = () => { 
+    alert(
+        "*신상정보*" + '\n' + '----------' + '\n' + '이름 : ' + this.state.name + '\n' + '나이 : ' + this.state.age +'\n' + '친구 : ' + this.state.friends
+      )
+  }
+
   render() {
-    const name = 'syleemomo'
-    const age = 3
-    
     return (
-        // JSX 문법 사용함
     	<>
-            <h3>{name}</h3>
-            <h4>{age}</h4>
+            <button onClick={this.displayInfo}>신상정보 확인하기</button>
         </>
     )
   }
 }
 
-export default Person
+export default Person;
